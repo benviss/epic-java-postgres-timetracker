@@ -1,0 +1,45 @@
+<h3>Accounting Department</h3>
+#foreach ($project in $accountingdepartment.getAllProjects())
+  <li>$project.getName()</li>
+  <ul>
+    #foreach ($task in $project.getTasks())
+    <li>$task.getName()</li>
+    <ul>
+      #foreach ($employee in $task.getEmployees())
+      <li>$employee.getName()</li>
+      #end
+    </ul>
+    #end
+  </ul>
+#end
+<h3>Marketing Department</h3>
+#foreach ($project in $marketingdepartment.getAllProjects())
+  <li>$project.getName()</li>
+  <ul>
+    #foreach ($task in $project.getTasks())
+    <li>$task.getName()</li>
+    <ul>
+      #foreach ($employee in $task.getEmployees())
+      <li>$employee.getName()</li>
+      #end
+    </ul>
+    #end
+  </ul>
+#end
+<h3>Developing Department</h3>
+#foreach ($project in $developingdepartment.getAllProjects())
+  <li>$project.getName()</li>
+  <ul>
+    #foreach ($task in $project.getTasks())
+    <li>$task.getName()</li>
+    <ul>
+      #foreach ($employee in $task.getEmployees())
+      <li>$employee.getName()</li>
+      #end
+    </ul>
+    #end
+  </ul>
+#end
+
+</ul>
+<a href="/departments">Create a department</a>
